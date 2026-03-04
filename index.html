@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niarah mi niña</title>
+
+<style>
+
+body{
+    background-color:#ffc0cb;
+    font-family: "Georgia", serif;
+    text-align:center;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
+.container{
+    margin-top:50px;
+}
+
+h1{
+    font-size:50px;
+    color:#8b004f;
+}
+
+.photos{
+    margin-top:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.photos img{
+    width:300px;
+    height:auto;
+    border-radius:15px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.center-text{
+    font-size:22px;
+    width:40%;
+    color:#4a0030;
+}
+
+.footer{
+    margin-top:40px;
+    font-size:20px;
+    color:#4a0030;
+}
+
+/* CORAZONES */
+
+.heart{
+    position:fixed;
+    top:-10px;
+    color:red;
+    font-size:24px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Te tengo un regalo</h1>
+
+<div class="photos">
+
+<img src="24784cf3-8fd4-49c7-b199-539e78c8cdd3.JPG">
+
+<div class="center-text">
+Si quiere ver el regalo, pues quiero decirte que este pequeño espacio es para recordarte lo especial que eres.
+Tu sonrisa ilumina todo y cada momento contigo es hermoso.
+Nunca olvides cuánto TE AMO.
+</div>
+
+<img src="ef2c2a19-2d8b-4949-9c4d-b6d28ce53933.JPG">
+
+</div>
+
+<div class="footer">
+Con mucho cariño tu Axel💖                Pdt: Revisa en mi bulto.
+</div>
+
+</div>
+
+<script>
+
+/* CREA CORAZONES */
+
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random()*2 + 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },5000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
